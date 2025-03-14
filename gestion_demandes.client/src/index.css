@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Iansui&display=swap');
+:root {
+  font-family: "Iansui", cursive;
+
+}
+
+
+button{
+    cursor:pointer;
+}
+
+:root{
+    @apply bg-gray-100;
+}

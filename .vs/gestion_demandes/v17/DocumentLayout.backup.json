@@ -1,0 +1,388 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|c:\\users\\derkaoui05\\desktop\\career\\eci\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\components\\employes\\employeetable.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|solutionrelative:gestion_demandes.client\\src\\components\\employes\\employeetable.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3666BF-E6D3-4ADF-8369-9FEFC2F54A2C}|gestion_demandes.Server\\gestion_demandes.Server.csproj|c:\\users\\derkaoui05\\desktop\\career\\eci\\developpement\\gestion_demandes\\gestion_demandes.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD3666BF-E6D3-4ADF-8369-9FEFC2F54A2C}|gestion_demandes.Server\\gestion_demandes.Server.csproj|solutionrelative:gestion_demandes.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3666BF-E6D3-4ADF-8369-9FEFC2F54A2C}|gestion_demandes.Server\\gestion_demandes.Server.csproj|c:\\users\\derkaoui05\\desktop\\career\\eci\\developpement\\gestion_demandes\\gestion_demandes.server\\controllers\\employescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD3666BF-E6D3-4ADF-8369-9FEFC2F54A2C}|gestion_demandes.Server\\gestion_demandes.Server.csproj|solutionrelative:gestion_demandes.server\\controllers\\employescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3666BF-E6D3-4ADF-8369-9FEFC2F54A2C}|gestion_demandes.Server\\gestion_demandes.Server.csproj|c:\\users\\derkaoui05\\desktop\\career\\eci\\developpement\\gestion_demandes\\gestion_demandes.server\\services\\employeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD3666BF-E6D3-4ADF-8369-9FEFC2F54A2C}|gestion_demandes.Server\\gestion_demandes.Server.csproj|solutionrelative:gestion_demandes.server\\services\\employeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3666BF-E6D3-4ADF-8369-9FEFC2F54A2C}|gestion_demandes.Server\\gestion_demandes.Server.csproj|c:\\users\\derkaoui05\\desktop\\career\\eci\\developpement\\gestion_demandes\\gestion_demandes.server\\repositories\\employerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD3666BF-E6D3-4ADF-8369-9FEFC2F54A2C}|gestion_demandes.Server\\gestion_demandes.Server.csproj|solutionrelative:gestion_demandes.server\\repositories\\employerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3666BF-E6D3-4ADF-8369-9FEFC2F54A2C}|gestion_demandes.Server\\gestion_demandes.Server.csproj|c:\\users\\derkaoui05\\desktop\\career\\eci\\developpement\\gestion_demandes\\gestion_demandes.server\\repositories\\interfaces\\iemployerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD3666BF-E6D3-4ADF-8369-9FEFC2F54A2C}|gestion_demandes.Server\\gestion_demandes.Server.csproj|solutionrelative:gestion_demandes.server\\repositories\\interfaces\\iemployerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3666BF-E6D3-4ADF-8369-9FEFC2F54A2C}|gestion_demandes.Server\\gestion_demandes.Server.csproj|c:\\users\\derkaoui05\\desktop\\career\\eci\\developpement\\gestion_demandes\\gestion_demandes.server\\dtos\\employedetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD3666BF-E6D3-4ADF-8369-9FEFC2F54A2C}|gestion_demandes.Server\\gestion_demandes.Server.csproj|solutionrelative:gestion_demandes.server\\dtos\\employedetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3666BF-E6D3-4ADF-8369-9FEFC2F54A2C}|gestion_demandes.Server\\gestion_demandes.Server.csproj|c:\\users\\derkaoui05\\desktop\\career\\eci\\developpement\\gestion_demandes\\gestion_demandes.server\\dtos\\employedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD3666BF-E6D3-4ADF-8369-9FEFC2F54A2C}|gestion_demandes.Server\\gestion_demandes.Server.csproj|solutionrelative:gestion_demandes.server\\dtos\\employedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|c:\\users\\derkaoui05\\desktop\\career\\eci\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\services\\employeservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|solutionrelative:gestion_demandes.client\\src\\services\\employeservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|c:\\users\\derkaoui05\\desktop\\career\\eci\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\hooks\\use-employee.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|solutionrelative:gestion_demandes.client\\src\\hooks\\use-employee.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3666BF-E6D3-4ADF-8369-9FEFC2F54A2C}|gestion_demandes.Server\\gestion_demandes.Server.csproj|c:\\users\\derkaoui05\\desktop\\career\\eci\\developpement\\gestion_demandes\\gestion_demandes.server\\repositories\\departementrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD3666BF-E6D3-4ADF-8369-9FEFC2F54A2C}|gestion_demandes.Server\\gestion_demandes.Server.csproj|solutionrelative:gestion_demandes.server\\repositories\\departementrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|c:\\users\\derkaoui05\\desktop\\career\\eci\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\utils\\export-utils.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|solutionrelative:gestion_demandes.client\\src\\utils\\export-utils.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|c:\\users\\derkaoui05\\desktop\\career\\eci\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\components\\employes\\employe.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|solutionrelative:gestion_demandes.client\\src\\components\\employes\\employe.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|c:\\users\\derkaoui05\\desktop\\career\\eci\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\components\\employes\\exportbutton.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|solutionrelative:gestion_demandes.client\\src\\components\\employes\\exportbutton.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|c:\\users\\derkaoui05\\desktop\\career\\eci\\developpement\\gestion_demandes\\gestion_demandes.client\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|solutionrelative:gestion_demandes.client\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|c:\\users\\derkaoui05\\desktop\\career\\eci\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|solutionrelative:gestion_demandes.client\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|c:\\users\\derkaoui05\\desktop\\career\\eci\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|solutionrelative:gestion_demandes.client\\src\\config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|c:\\users\\derkaoui05\\desktop\\career\\eci\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\components\\dashboard\\sidebar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|solutionrelative:gestion_demandes.client\\src\\components\\dashboard\\sidebar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|c:\\users\\derkaoui05\\desktop\\career\\eci\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\components\\employes\\employeeform.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|solutionrelative:gestion_demandes.client\\src\\components\\employes\\employeeform.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|c:\\users\\derkaoui05\\desktop\\career\\eci\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\hooks\\use-reference-data.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|solutionrelative:gestion_demandes.client\\src\\hooks\\use-reference-data.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|c:\\users\\derkaoui05\\desktop\\career\\eci\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\services\\roleservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{26F06C6A-1142-224B-9026-C44EEB24C412}|gestion_demandes.client\\gestion_demandes.client.esproj|solutionrelative:gestion_demandes.client\\src\\services\\roleservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 20,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.Server\\Program.cs",
+              "RelativeDocumentMoniker": "gestion_demandes.Server\\Program.cs",
+              "ToolTip": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.Server\\Program.cs",
+              "RelativeToolTip": "gestion_demandes.Server\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T08:59:37.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeService.cs",
+              "DocumentMoniker": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.Server\\Services\\EmployeService.cs",
+              "RelativeDocumentMoniker": "gestion_demandes.Server\\Services\\EmployeService.cs",
+              "ToolTip": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.Server\\Services\\EmployeService.cs",
+              "RelativeToolTip": "gestion_demandes.Server\\Services\\EmployeService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwCoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T08:59:04.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmployeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.Server\\Repositories\\EmployeRepository.cs",
+              "RelativeDocumentMoniker": "gestion_demandes.Server\\Repositories\\EmployeRepository.cs",
+              "ToolTip": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.Server\\Repositories\\EmployeRepository.cs",
+              "RelativeToolTip": "gestion_demandes.Server\\Repositories\\EmployeRepository.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAwFQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T08:58:47.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EmployeDetailDTO.cs",
+              "DocumentMoniker": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.Server\\DTOs\\EmployeDetailDTO.cs",
+              "RelativeDocumentMoniker": "gestion_demandes.Server\\DTOs\\EmployeDetailDTO.cs",
+              "ToolTip": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.Server\\DTOs\\EmployeDetailDTO.cs",
+              "RelativeToolTip": "gestion_demandes.Server\\DTOs\\EmployeDetailDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T08:58:25.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployesController.cs",
+              "DocumentMoniker": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.Server\\Controllers\\EmployesController.cs",
+              "RelativeDocumentMoniker": "gestion_demandes.Server\\Controllers\\EmployesController.cs",
+              "ToolTip": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.Server\\Controllers\\EmployesController.cs",
+              "RelativeToolTip": "gestion_demandes.Server\\Controllers\\EmployesController.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAwJcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T08:54:17.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmployeDTO.cs",
+              "DocumentMoniker": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.Server\\DTOs\\EmployeDTO.cs",
+              "RelativeDocumentMoniker": "gestion_demandes.Server\\DTOs\\EmployeDTO.cs",
+              "ToolTip": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.Server\\DTOs\\EmployeDTO.cs",
+              "RelativeToolTip": "gestion_demandes.Server\\DTOs\\EmployeDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T08:51:12.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DepartementRepository.cs",
+              "DocumentMoniker": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.Server\\Repositories\\DepartementRepository.cs",
+              "RelativeDocumentMoniker": "gestion_demandes.Server\\Repositories\\DepartementRepository.cs",
+              "ToolTip": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.Server\\Repositories\\DepartementRepository.cs",
+              "RelativeToolTip": "gestion_demandes.Server\\Repositories\\DepartementRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T08:49:12.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IEmployeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.Server\\Repositories\\Interfaces\\IEmployeRepository.cs",
+              "RelativeDocumentMoniker": "gestion_demandes.Server\\Repositories\\Interfaces\\IEmployeRepository.cs",
+              "ToolTip": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.Server\\Repositories\\Interfaces\\IEmployeRepository.cs*",
+              "RelativeToolTip": "gestion_demandes.Server\\Repositories\\Interfaces\\IEmployeRepository.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T08:47:48.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EmployeService.js",
+              "DocumentMoniker": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\services\\EmployeService.js",
+              "RelativeDocumentMoniker": "gestion_demandes.client\\src\\services\\EmployeService.js",
+              "ToolTip": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\services\\EmployeService.js*",
+              "RelativeToolTip": "gestion_demandes.client\\src\\services\\EmployeService.js*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-14T08:39:15.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ExportButton.jsx",
+              "DocumentMoniker": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\components\\Employes\\ExportButton.jsx",
+              "RelativeDocumentMoniker": "gestion_demandes.client\\src\\components\\Employes\\ExportButton.jsx",
+              "ToolTip": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\components\\Employes\\ExportButton.jsx",
+              "RelativeToolTip": "gestion_demandes.client\\src\\components\\Employes\\ExportButton.jsx",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-14T08:31:39.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "export-utils.js",
+              "DocumentMoniker": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\utils\\export-utils.js",
+              "RelativeDocumentMoniker": "gestion_demandes.client\\src\\utils\\export-utils.js",
+              "ToolTip": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\utils\\export-utils.js",
+              "RelativeToolTip": "gestion_demandes.client\\src\\utils\\export-utils.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-14T08:30:28.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "package.json",
+              "DocumentMoniker": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\package.json",
+              "RelativeDocumentMoniker": "gestion_demandes.client\\package.json",
+              "ToolTip": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\package.json",
+              "RelativeToolTip": "gestion_demandes.client\\package.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-14T08:28:10.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "use-employee.js",
+              "DocumentMoniker": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\hooks\\use-employee.js",
+              "RelativeDocumentMoniker": "gestion_demandes.client\\src\\hooks\\use-employee.js",
+              "ToolTip": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\hooks\\use-employee.js",
+              "RelativeToolTip": "gestion_demandes.client\\src\\hooks\\use-employee.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-12T09:43:16.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "config.js",
+              "DocumentMoniker": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\config.js",
+              "RelativeDocumentMoniker": "gestion_demandes.client\\src\\config.js",
+              "ToolTip": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\config.js",
+              "RelativeToolTip": "gestion_demandes.client\\src\\config.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-12T09:41:42.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "index.css",
+              "DocumentMoniker": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\index.css",
+              "RelativeDocumentMoniker": "gestion_demandes.client\\src\\index.css",
+              "ToolTip": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\index.css",
+              "RelativeToolTip": "gestion_demandes.client\\src\\index.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-12T09:41:38.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Sidebar.jsx",
+              "DocumentMoniker": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\components\\Dashboard\\Sidebar.jsx",
+              "RelativeDocumentMoniker": "gestion_demandes.client\\src\\components\\Dashboard\\Sidebar.jsx",
+              "ToolTip": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\components\\Dashboard\\Sidebar.jsx",
+              "RelativeToolTip": "gestion_demandes.client\\src\\components\\Dashboard\\Sidebar.jsx",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAmwCAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-12T09:37:24.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Employe.jsx",
+              "DocumentMoniker": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\components\\Employes\\Employe.jsx",
+              "RelativeDocumentMoniker": "gestion_demandes.client\\src\\components\\Employes\\Employe.jsx",
+              "ToolTip": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\components\\Employes\\Employe.jsx",
+              "RelativeToolTip": "gestion_demandes.client\\src\\components\\Employes\\Employe.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-12T08:55:49.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeeTable.jsx",
+              "DocumentMoniker": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\components\\Employes\\EmployeeTable.jsx",
+              "RelativeDocumentMoniker": "gestion_demandes.client\\src\\components\\Employes\\EmployeeTable.jsx",
+              "ToolTip": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\components\\Employes\\EmployeeTable.jsx*",
+              "RelativeToolTip": "gestion_demandes.client\\src\\components\\Employes\\EmployeeTable.jsx*",
+              "ViewState": "AgIAACkAAAAAAAAAAADwvzcAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-12T08:22:51.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "EmployeeForm.jsx",
+              "DocumentMoniker": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\components\\Employes\\EmployeeForm.jsx",
+              "RelativeDocumentMoniker": "gestion_demandes.client\\src\\components\\Employes\\EmployeeForm.jsx",
+              "ToolTip": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\components\\Employes\\EmployeeForm.jsx",
+              "RelativeToolTip": "gestion_demandes.client\\src\\components\\Employes\\EmployeeForm.jsx",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAAIIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-12T08:22:16.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "use-reference-data.js",
+              "DocumentMoniker": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\hooks\\use-reference-data.js",
+              "RelativeDocumentMoniker": "gestion_demandes.client\\src\\hooks\\use-reference-data.js",
+              "ToolTip": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\hooks\\use-reference-data.js",
+              "RelativeToolTip": "gestion_demandes.client\\src\\hooks\\use-reference-data.js",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-12T08:21:47.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "RoleService.js",
+              "DocumentMoniker": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\services\\RoleService.js",
+              "RelativeDocumentMoniker": "gestion_demandes.client\\src\\services\\RoleService.js",
+              "ToolTip": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.client\\src\\services\\RoleService.js",
+              "RelativeToolTip": "gestion_demandes.client\\src\\services\\RoleService.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-12T08:20:42.413Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

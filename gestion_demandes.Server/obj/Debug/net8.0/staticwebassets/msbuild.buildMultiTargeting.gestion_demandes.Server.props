@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\gestion_demandes.Server.props" />
+</Project>

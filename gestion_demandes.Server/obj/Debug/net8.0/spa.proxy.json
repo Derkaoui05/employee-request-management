@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:56850",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.Server\\..\\gestion_demandes.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

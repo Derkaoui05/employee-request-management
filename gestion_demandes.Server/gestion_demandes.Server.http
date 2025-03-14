@@ -1,0 +1,12 @@
+@gestion_demandes.Server_HostAddress = http://localhost:5135
+
+GET {{gestion_demandes.Server_HostAddress}}/api/Employes
+Accept: application/json
+
+### Get all departement
+GET {{gestion_demandes.Server_HostAddress}}/api/Departement
+Accept: application/json
+
+### Get all roles
+GET {{gestion_demandes.Server_HostAddress}}/api/Role
+Accept: application/json
