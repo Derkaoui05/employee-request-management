@@ -14,8 +14,8 @@ export const exportEmployeesToExcel = (employees, fileName = 'employees') => {
             "Prenom": employee.prenom,
             "Email": employee.email,
             "Date Embauche": formatDate(employee.dateEmbauche),
-            "Role": employee.nomRole || "",
-            "Departement": employee.nomDepartement || ""
+            "Role": employee.role ? employee.role.nomRole : "norfound",
+            "Departement": employee.departement ? employee.departement.nomDepartement : "notfound"
         }));
 
         const worksheet = XLSX.utils.json_to_sheet(formattedData);

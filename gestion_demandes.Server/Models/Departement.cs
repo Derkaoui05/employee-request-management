@@ -9,12 +9,14 @@ namespace gestion_demandes.Server.Models
         [Key]
         public int IdDepartement { get; set; }
 
-        public string NomDepartement { get; set; }
+        [Required]
+        public string NomDepartement { get; set; } = string.Empty;
 
-        [ForeignKey("Manager")]
         public int? MatriculeManager { get; set; }
-        public Employe Manager { get; set; }
-        [JsonIgnore]
-        public List<Employe> Employes { get; set; } = new List<Employe>();
+
+        [ForeignKey("MatriculeManager")]
+        public virtual Employe? Manager { get; set; }
+
+        public virtual ICollection<Employe> Employes { get; set; } = new List<Employe>();
     }
 }

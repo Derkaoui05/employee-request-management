@@ -1,10 +1,4 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Iansui&display=swap');
-:root {
-  font-family: "Iansui", cursive;
-
-}
-
 
 button{
     cursor:pointer;
@@ -12,4 +6,22 @@ button{
 
 :root{
     @apply bg-gray-100;
+}
+
+.animate-shine {
+    animation: shine 2s infinite;
+}
+
+@keyframes shine {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(0, 0, 255, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 }

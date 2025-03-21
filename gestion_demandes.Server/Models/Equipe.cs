@@ -7,18 +7,23 @@ namespace gestion_demandes.Server.Models
     {
         [Key]
         public int IdEquipe { get; set; }
-        public string NomEquipe { get; set; }
 
-        [ForeignKey("Departement")]
+        [Required]
+        public string NomEquipe { get; set; } = string.Empty;
+
         public int IdDepartement { get; set; }
-        public Departement Departement { get; set; }
 
-        [ForeignKey("Responsable")]
+        [ForeignKey("IdDepartement")]
+        public virtual Departement? Departement { get; set; }
+
         public int MatriculeResponsable { get; set; }
-        public Employe Responsable { get; set; }
 
-        [ForeignKey("EquipeParent")]
+        [ForeignKey("MatriculeResponsable")]
+        public virtual Employe? Responsable { get; set; }
+
         public int? EquipeParentId { get; set; }
-        public Equipe EquipeParent { get; set; }
+
+        [ForeignKey("EquipeParentId")]
+        public virtual Equipe? EquipeParent { get; set; }
     }
 }

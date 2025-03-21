@@ -17,8 +17,7 @@ namespace gestion_demandes.Server.Migrations
                 {
                     IdRole = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    NomRole = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    NiveauAcces = table.Column<int>(type: "int", nullable: false)
+                    NomRole = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -31,7 +30,7 @@ namespace gestion_demandes.Server.Migrations
                 {
                     IdType = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    NomType = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    NomType = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -44,16 +43,14 @@ namespace gestion_demandes.Server.Migrations
                 {
                     IdDemande = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    MatriculeDemandeur = table.Column<int>(type: "int", nullable: false),
-                    MatriculeEmploye = table.Column<int>(type: "int", nullable: false),
+                    Matricule = table.Column<int>(type: "int", nullable: false),
                     IdType = table.Column<int>(type: "int", nullable: false),
                     DateDebut = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DateFin = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DureeJournaliere = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    SoldeConge = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Commentaire = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Details = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Statut = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DateCreation = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    DateCreation = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DateMiseAJour = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -63,7 +60,7 @@ namespace gestion_demandes.Server.Migrations
                         column: x => x.IdType,
                         principalTable: "TypesDemande",
                         principalColumn: "IdType",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -92,7 +89,8 @@ namespace gestion_demandes.Server.Migrations
                     MotDePasse = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DateEmbauche = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IdRole = table.Column<int>(type: "int", nullable: false),
-                    IdDepartement = table.Column<int>(type: "int", nullable: true)
+                    IdDepartement = table.Column<int>(type: "int", nullable: true),
+                    SoldeConge = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -107,7 +105,7 @@ namespace gestion_demandes.Server.Migrations
                         column: x => x.IdRole,
                         principalTable: "Roles",
                         principalColumn: "IdRole",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -129,13 +127,13 @@ namespace gestion_demandes.Server.Migrations
                         column: x => x.IdDepartement,
                         principalTable: "Departements",
                         principalColumn: "IdDepartement",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Equipes_Employes_MatriculeResponsable",
                         column: x => x.MatriculeResponsable,
                         principalTable: "Employes",
                         principalColumn: "Matricule",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Equipes_Equipes_EquipeParentId",
                         column: x => x.EquipeParentId,
@@ -149,14 +147,9 @@ namespace gestion_demandes.Server.Migrations
                 column: "IdType");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Demandes_MatriculeDemandeur",
+                name: "IX_Demandes_Matricule",
                 table: "Demandes",
-                column: "MatriculeDemandeur");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Demandes_MatriculeEmploye",
-                table: "Demandes",
-                column: "MatriculeEmploye");
+                column: "Matricule");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Departements_MatriculeManager",
@@ -189,20 +182,12 @@ namespace gestion_demandes.Server.Migrations
                 column: "MatriculeResponsable");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Demandes_Employes_MatriculeDemandeur",
+                name: "FK_Demandes_Employes_Matricule",
                 table: "Demandes",
-                column: "MatriculeDemandeur",
+                column: "Matricule",
                 principalTable: "Employes",
                 principalColumn: "Matricule",
-                onDelete: ReferentialAction.NoAction);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Demandes_Employes_MatriculeEmploye",
-                table: "Demandes",
-                column: "MatriculeEmploye",
-                principalTable: "Employes",
-                principalColumn: "Matricule",
-                onDelete: ReferentialAction.NoAction);
+                onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Departements_Employes_MatriculeManager",

@@ -48,7 +48,7 @@ const EmployeeForm = ({ employee, onSave, onCancel }) => {
                 nom: employee.nom || "",
                 prenom: employee.prenom || "",
                 email: employee.email || "",
-                motDePasse: "", // Don't show existing password
+                motDePasse: "",
                 dateEmbauche: employee.dateEmbauche
                     ? employee.dateEmbauche.split("T")[0]
                     : new Date().toISOString().split("T")[0],

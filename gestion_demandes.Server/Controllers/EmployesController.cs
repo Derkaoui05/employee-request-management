@@ -4,6 +4,8 @@ using gestion_demandes.Server.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using gestion_demandes.Server.Data;
+using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace gestion_demandes.Server.Controllers
@@ -73,7 +75,8 @@ namespace gestion_demandes.Server.Controllers
                 MotDePasse = employeDTO.MotDePasse,
                 DateEmbauche = employeDTO.DateEmbauche,
                 IdRole = employeDTO.IdRole,
-                IdDepartement = employeDTO.IdDepartement
+                IdDepartement = employeDTO.IdDepartement,
+                SoldeConge = 18 // Valeur par défaut
             };
 
             await _employeService.AddEmploye(employe);
@@ -81,6 +84,37 @@ namespace gestion_demandes.Server.Controllers
             // Récupérer l'employé créé avec ses détails
             var createdEmploye = await _employeService.GetEmployeByMatricule(employe.Matricule);
             return CreatedAtAction(nameof(GetByMatricule), new { matricule = employe.Matricule }, createdEmploye);
+        }
+
+        // GET: api/Employes/5/solde-conge
+        [HttpGet("{matricule}/solde-conge")]
+        public async Task<ActionResult<object>> GetEmployeSoldeConge(int matricule)
+        {
+            var employe = await _context.Employes.FindAsync(matricule);
+            if (employe == null)
+            {
+                return NotFound("L'employé spécifié n'existe pas.");
+            }
+
+            int soldeConge = employe.SoldeConge; // Utiliser la propriété SoldeConge de l'employé
+
+            // Calculer le solde en fonction des demandes de congés approuvées
+            var demandesConges = await _context.Demandes
+                .Include(d => d.TypeDemande)
+                .Where(d => d.Matricule == matricule &&
+                           d.Statut == "Approuvé" &&
+                           d.TypeDemande.NomType.Contains("Congé") &&
+                           !d.TypeDemande.NomType.Contains("sans solde"))
+                .ToListAsync();
+
+            foreach (var demande in demandesConges)
+            {
+                // Calculer la durée de la demande en jours
+                int duree = (int)(demande.DateFin - demande.DateDebut).TotalDays + 1;
+                soldeConge -= duree;
+            }
+
+            return new { soldeConge = Math.Max(0, soldeConge) };
         }
 
         [HttpPut("{matricule}")]

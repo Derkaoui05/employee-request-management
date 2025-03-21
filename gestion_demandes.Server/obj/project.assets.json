@@ -4480,11 +4480,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.Server\\gestion_demandes.Server.csproj",
+      "projectUniqueName": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.server\\gestion_demandes.Server.csproj",
       "projectName": "gestion_demandes.Server",
-      "projectPath": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.Server\\gestion_demandes.Server.csproj",
+      "projectPath": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.server\\gestion_demandes.Server.csproj",
       "packagesPath": "C:\\Users\\derkaoui05\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.Server\\obj\\",
+      "outputPath": "C:\\Users\\derkaoui05\\Desktop\\career\\ECI\\developpement\\gestion_demandes\\gestion_demandes.server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

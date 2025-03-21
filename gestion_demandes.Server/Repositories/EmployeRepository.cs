@@ -1,11 +1,7 @@
 ﻿using gestion_demandes.Server.Data;
 using gestion_demandes.Server.Models;
-using gestion_demandes.Server.DTOs;
 using gestion_demandes.Server.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace gestion_demandes.Server.Repositories
 {
@@ -18,61 +14,36 @@ namespace gestion_demandes.Server.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<EmployeDetailDTO>> GetAllWithDetailsAsync()
+        public async Task<IEnumerable<Employe>> GetAllEmployes()
         {
             return await _context.Employes
                 .Include(e => e.Role)
                 .Include(e => e.Departement)
-                .Select(e => new EmployeDetailDTO
-                {
-                    Matricule = e.Matricule,
-                    Nom = e.Nom,
-                    Prenom = e.Prenom,
-                    Email = e.Email,
-                    DateEmbauche = e.DateEmbauche,
-                    IdRole = e.IdRole,
-                    NomRole = e.Role.NomRole,
-                    IdDepartement = e.IdDepartement,
-                    NomDepartement = e.Departement != null ? e.Departement.NomDepartement : null
-                })
                 .ToListAsync();
         }
 
-        public async Task<EmployeDetailDTO> GetByIdWithDetailsAsync(int matricule)
+        public async Task<Employe?> GetEmployeByMatricule(int matricule)
         {
             return await _context.Employes
                 .Include(e => e.Role)
                 .Include(e => e.Departement)
-                .Where(e => e.Matricule == matricule)
-                .Select(e => new EmployeDetailDTO
-                {
-                    Matricule = e.Matricule,
-                    Nom = e.Nom,
-                    Prenom = e.Prenom,
-                    Email = e.Email,
-                    DateEmbauche = e.DateEmbauche,
-                    IdRole = e.IdRole,
-                    NomRole = e.Role.NomRole,
-                    IdDepartement = e.IdDepartement,
-                    NomDepartement = e.Departement != null ? e.Departement.NomDepartement : null
-                })
-                .FirstOrDefaultAsync();
+                .FirstOrDefaultAsync(e => e.Matricule == matricule);
         }
 
-        public async Task<Employe> AddAsync(Employe employe)
+        public async Task<Employe> AddEmploye(Employe employe)
         {
             _context.Employes.Add(employe);
             await _context.SaveChangesAsync();
             return employe;
         }
 
-        public async Task UpdateAsync(Employe employe)
+        public async Task UpdateEmploye(Employe employe)
         {
             _context.Entry(employe).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(int matricule)
+        public async Task DeleteEmploye(int matricule)
         {
             var employe = await _context.Employes.FindAsync(matricule);
             if (employe != null)

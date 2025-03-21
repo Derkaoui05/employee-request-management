@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo  from "../../assets/logo.svg"
+import logo from "../../assets/logo.svg"
 
 const navItems = [
     { name: "Tableau de bord" },
@@ -16,9 +16,9 @@ const dropdownOptions = {
     "Tableau de bord": [{ "name": "Mes Informations", "link": "/Information" }],
     "Demandes de Conge": [{ name: "Nouvelle Demande", link: "/demandes/nouvelle" }, { name: "Suivi des demandes", link: "/demandes/suivi" }],
     "Historique des Conges": [{ name: "Tous les Conges", link: "/historique" }, { name: "Conges par Employe", link: "/historique/employe" }],
-    "Gestion des Employes": [{ name: "Liste des Employes", link: "/employes/liste" }, { name: "Ajouter un Employe", link: "/employes/ajouter" }],
+    "Gestion des Employes": [{ name: "Liste des Employes", link: "/employes/liste" }],
     "Synthese des Heures": [{ name: "Heures de Travail", link: "/heures/travail" }, { name: "Heures supplementaires", link: "/heures/supplementaires" }],
-    "Parametrage": [{ name: "Configurations", link: "/parametrage/configurations" }, { name: "Droits d'accès", link: "/parametrage/droits" }],
+    "Parametrage": [{ name: "Configurations", link: "/parametrage/configurations" }, { name: "Droits d'acces", link: "/parametrage/droits" }],
 };
 
 export default function Sidebar() {
@@ -29,7 +29,7 @@ export default function Sidebar() {
     };
 
     return (
-        <div className="w-80 h-screen bg-[#0077B5] fixed left-0 top-0 p-6 text-white flex flex-col shadow-lg rounded-tr-[39px] transition-all ease-in-out duration-300">
+        <div className="w-80 h-screen bg-blue-500 fixed left-0 top-0 p-6 text-white flex flex-col shadow-lg rounded-tr-[39px] transition-all ease-in-out duration-300">
             <div className="block my-4" >
                 <img src={logo} className="w-full" />
             </div>
@@ -37,10 +37,10 @@ export default function Sidebar() {
                 <div key={index} className="mt-10">
                     <div
                         onClick={() => toggleDropdown(index)}
-                        className="flex items-center cursor-pointer p-3 rounded-lg hover:bg-opacity-70 transition-all"
+                        className="flex items-center cursor-pointer p-3 rounded-lg hover:bg-green-400 hover:text-yellow-200 transition-all"
                         style={{ backgroundColor: "rgba(255, 255, 255, 12%)" }}
                     >
-                        {openDropdown === index ? <ChevronUp /> : <ChevronDown />}
+                        {openDropdown === index ? <ChevronUp className="text-yellow-200" /> : <ChevronDown className="text-yellow-200" />}
                         <span className="ml-3">{item.name}</span>
                     </div>
                     {openDropdown === index && (
@@ -49,9 +49,9 @@ export default function Sidebar() {
                                 <Link
                                     key={i}
                                     to={option.link}
-                                    className="flex hover:underline items-center text-gray-200 hover:text-white transition-all space-x-2 py-1"
+                                    className="flex hover:underline items-center text-gray-200 hover:text-yellow-200 transition-all space-x-2 py-1"
                                 >
-                                    <ArrowRight size={16} />
+                                    <ArrowRight size={16} className="text-yellow-200" />
                                     <span>{option.name}</span>
                                 </Link>
                             ))}

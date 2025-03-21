@@ -1,6 +1,5 @@
 
 
-
 export const fetchEmployes = async () => {
     const response = await fetch('/api/Employes');
     return response.json();

@@ -12,7 +12,7 @@ using gestion_demandes.Server.Data;
 namespace gestion_demandes.Server.Migrations
 {
     [DbContext(typeof(GestionDemandesContext))]
-    [Migration("20250310075723_InitialCreate")]
+    [Migration("20250320001613_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -20,7 +20,7 @@ namespace gestion_demandes.Server.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.2")
+                .HasAnnotation("ProductVersion", "8.0.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -33,10 +33,6 @@ namespace gestion_demandes.Server.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdDemande"));
 
-                    b.Property<string>("Commentaire")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("DateCreation")
                         .HasColumnType("datetime2");
 
@@ -46,20 +42,18 @@ namespace gestion_demandes.Server.Migrations
                     b.Property<DateTime>("DateFin")
                         .HasColumnType("datetime2");
 
-                    b.Property<decimal>("DureeJournaliere")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<DateTime?>("DateMiseAJour")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Details")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("IdType")
                         .HasColumnType("int");
 
-                    b.Property<int>("MatriculeDemandeur")
+                    b.Property<int>("Matricule")
                         .HasColumnType("int");
-
-                    b.Property<int>("MatriculeEmploye")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("SoldeConge")
-                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Statut")
                         .IsRequired()
@@ -69,9 +63,7 @@ namespace gestion_demandes.Server.Migrations
 
                     b.HasIndex("IdType");
 
-                    b.HasIndex("MatriculeDemandeur");
-
-                    b.HasIndex("MatriculeEmploye");
+                    b.HasIndex("Matricule");
 
                     b.ToTable("Demandes");
                 });
@@ -131,6 +123,9 @@ namespace gestion_demandes.Server.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("SoldeConge")
+                        .HasColumnType("int");
+
                     b.HasKey("Matricule");
 
                     b.HasIndex("IdDepartement");
@@ -180,9 +175,6 @@ namespace gestion_demandes.Server.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdRole"));
 
-                    b.Property<int>("NiveauAcces")
-                        .HasColumnType("int");
-
                     b.Property<string>("NomRole")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -202,7 +194,8 @@ namespace gestion_demandes.Server.Migrations
 
                     b.Property<string>("NomType")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("IdType");
 
@@ -212,24 +205,16 @@ namespace gestion_demandes.Server.Migrations
             modelBuilder.Entity("gestion_demandes.Server.Models.Demande", b =>
                 {
                     b.HasOne("gestion_demandes.Server.Models.TypeDemande", "TypeDemande")
-                        .WithMany()
+                        .WithMany("Demandes")
                         .HasForeignKey("IdType")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("gestion_demandes.Server.Models.Employe", "Demandeur")
-                        .WithMany()
-                        .HasForeignKey("MatriculeDemandeur")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("gestion_demandes.Server.Models.Employe", "Employe")
-                        .WithMany()
-                        .HasForeignKey("MatriculeEmploye")
+                        .WithMany("Demandes")
+                        .HasForeignKey("Matricule")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Demandeur");
 
                     b.Navigation("Employe");
 
@@ -290,6 +275,16 @@ namespace gestion_demandes.Server.Migrations
             modelBuilder.Entity("gestion_demandes.Server.Models.Departement", b =>
                 {
                     b.Navigation("Employes");
+                });
+
+            modelBuilder.Entity("gestion_demandes.Server.Models.Employe", b =>
+                {
+                    b.Navigation("Demandes");
+                });
+
+            modelBuilder.Entity("gestion_demandes.Server.Models.TypeDemande", b =>
+                {
+                    b.Navigation("Demandes");
                 });
 #pragma warning restore 612, 618
         }

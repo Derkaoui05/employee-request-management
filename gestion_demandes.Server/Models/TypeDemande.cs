@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace gestion_demandes.Server.Models
 {
@@ -6,6 +7,10 @@ namespace gestion_demandes.Server.Models
     {
         [Key]
         public int IdType { get; set; }
-        public string NomType { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string NomType { get; set; } = string.Empty;
+        public virtual ICollection<Demande> Demandes { get; set; } = new List<Demande>();
     }
 }

@@ -6,7 +6,8 @@ namespace gestion_demandes.Server.Models
     {
         [Key]
         public int IdRole { get; set; }
-        public string NomRole { get; set; }
-        public int NiveauAcces { get; set; }
+
+        [Required]
+        public string NomRole { get; set; } = string.Empty;
     }
 }

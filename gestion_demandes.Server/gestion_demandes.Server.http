@@ -10,3 +10,6 @@ Accept: application/json
 ### Get all roles
 GET {{gestion_demandes.Server_HostAddress}}/api/Role
 Accept: application/json
+
+### GET all Demandes
+GET {{gestion_demandes.Server_HostAddress}}/api/Demandes

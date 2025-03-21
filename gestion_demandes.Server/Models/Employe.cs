@@ -7,21 +7,36 @@ namespace gestion_demandes.Server.Models
     public class Employe
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Matricule { get; set; }
-        public string Nom { get; set; }
-        public string Prenom { get; set; }
-        public string Email { get; set; }
-        public string MotDePasse { get; set; }
+
+        [Required]
+        public string Nom { get; set; } = string.Empty;
+
+        [Required]
+        public string Prenom { get; set; } = string.Empty;
+
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; } = string.Empty;
+
+        [Required]
+        public string MotDePasse { get; set; } = string.Empty;
+
         public DateTime DateEmbauche { get; set; }
 
-        [ForeignKey("Role")]
         public int IdRole { get; set; }
-        public Role Role { get; set; }
 
-        [ForeignKey("Departement")]
+        [ForeignKey("IdRole")]
+        public virtual Role? Role { get; set; }
+
         public int? IdDepartement { get; set; }
+
+        [ForeignKey("IdDepartement")]
         [JsonIgnore]
-        public Departement Departement { get; set; }
+        public virtual Departement? Departement { get; set; }
+        public virtual ICollection<Demande> Demandes { get; set; } = new List<Demande>();
+
+        public int SoldeConge { get; set; } = 18;
     }
 }

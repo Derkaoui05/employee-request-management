@@ -1,13 +1,62 @@
 import apiClient from "./api-client"
 
-// Repository pattern - Employee specific API calls
 export const employeeService = {
-    getAll: () => apiClient("Employes"),
+    getAll: async () => {
+        const employees = await apiClient("Employes")
 
+        console.log("Raw API response:", employees)
+
+        return employees.map((employee) => {
+            const employeeWithDetails = { ...employee }
+
+            if (employee.departement && employee.departement.nomDepartement) {
+                // Déjà correctement formaté, ne rien faire
+            }
+            else if (employee.departement && employee.departement.nom) {
+                employeeWithDetails.departement = {
+                    ...employee.departement,
+                    nomDepartement: employee.departement.nom
+                }
+            }
+            else if (employee.idDepartement) {
+                employeeWithDetails.departement = {
+                    idDepartement: employee.idDepartement,
+                    nomDepartement: `Département ${employee.idDepartement}`
+                }
+            }
+
+            if (employee.role && employee.role.nomRole) {
+                // Déjà correctement formaté
+            }
+            else if (employee.role && employee.role.nom) {
+                employeeWithDetails.role = {
+                    ...employee.role,
+                    nomRole: employee.role.nom
+                }
+            }
+            else if (employee.idRole) {
+                employeeWithDetails.role = {
+                    idRole: employee.idRole,
+                    nomRole: `Rôle ${employee.idRole}`
+                }
+            }
+
+            return employeeWithDetails
+        })
+    },
+
+    // Récupérer un employé par son matricule
     getById: (matricule) => apiClient(`Employes/${matricule}`),
 
+    // Récupérer le solde de congés d'un employé
+    getLeaveBalance: (matricule) => apiClient(`Employes/${matricule}/solde-conge`),
+
+    // Récupérer les demandes d'un employé
+    getEmployeeRequests: (matricule) => apiClient(`Demandes/employe/${matricule}`),
+
+    // Créer un nouvel employé
     create: (employee) => {
-        // Format the data before sending to the API
+        // Formater les données avant l'envoi à l'API
         const formattedEmployee = formatEmployeeData(employee)
 
         return apiClient("Employes", {
@@ -16,8 +65,9 @@ export const employeeService = {
         })
     },
 
+    // Mettre à jour un employé existant
     update: (employee) => {
-        // Format the data before sending to the API
+        // Formater les données avant l'envoi à l'API
         const formattedEmployee = formatEmployeeData(employee, true)
 
         return apiClient(`Employes/${employee.matricule}`, {
@@ -26,42 +76,44 @@ export const employeeService = {
         })
     },
 
+    // Supprimer un employé
     delete: (matricule) =>
         apiClient(`Employes/${matricule}`, {
             method: "DELETE",
         }),
 }
 
-// Helper function to format employee data
+// Fonction utilitaire pour formater les données d'un employé
 function formatEmployeeData(employee, isUpdate = false) {
-    // Create a copy to avoid modifying the original
+    // Créer une copie pour éviter de modifier l'original
     const formattedEmployee = { ...employee }
 
-    // Convert empty strings to null for optional fields
+    // Convertir les chaînes vides en null pour les champs optionnels
     if (formattedEmployee.idDepartement === "") formattedEmployee.idDepartement = null
 
-    // Handle password for updates
+    // Gérer le mot de passe pour les mises à jour
     if (isUpdate && formattedEmployee.motDePasse === "") {
-        // If updating and password is empty, remove it from the payload
+        // Si mise à jour et mot de passe vide, le supprimer du payload
         delete formattedEmployee.motDePasse
     }
 
-    // Ensure date is in the correct format
+    // S'assurer que la date est au bon format
     if (formattedEmployee.dateEmbauche) {
-        // Keep the date in ISO format for the API
+        // Garder la date au format ISO pour l'API
         formattedEmployee.dateEmbauche = new Date(formattedEmployee.dateEmbauche).toISOString()
     } else {
-        formattedEmployee.dateEmbauche = new Date().toISOString() // Default to current date
+        formattedEmployee.dateEmbauche = new Date().toISOString() // Par défaut à la date actuelle
     }
 
-    // Convert string IDs to numbers
+    // Convertir les IDs en nombres
     formattedEmployee.matricule = Number(formattedEmployee.matricule)
     formattedEmployee.idRole = Number(formattedEmployee.idRole)
     if (formattedEmployee.idDepartement) formattedEmployee.idDepartement = Number(formattedEmployee.idDepartement)
 
-    // Remove any properties that shouldn't be sent to the API
-    delete formattedEmployee.nomRole
-    delete formattedEmployee.nomDepartement
+    // Supprimer les propriétés de navigation qui pourraient causer des problèmes
+    delete formattedEmployee.role
+    delete formattedEmployee.departement
+    delete formattedEmployee.demandes
 
     return formattedEmployee
 }

@@ -1,5 +1,6 @@
 ﻿using gestion_demandes.Server.Models;
 using Microsoft.EntityFrameworkCore;
+
 namespace gestion_demandes.Server.Data
 {
     public class GestionDemandesContext : DbContext
@@ -16,6 +17,7 @@ namespace gestion_demandes.Server.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Clés primaires
             modelBuilder.Entity<Demande>()
                 .HasKey(d => d.IdDemande);
             modelBuilder.Entity<Departement>().HasKey(d => d.IdDepartement);
@@ -24,6 +26,7 @@ namespace gestion_demandes.Server.Data
             modelBuilder.Entity<Equipe>().HasKey(e => e.IdEquipe);
             modelBuilder.Entity<TypeDemande>().HasKey(t => t.IdType);
 
+            // Relations
             modelBuilder.Entity<Employe>()
                 .HasOne(e => e.Departement)
                 .WithMany(d => d.Employes)
@@ -38,7 +41,18 @@ namespace gestion_demandes.Server.Data
                 .HasOne(e => e.EquipeParent)
                 .WithMany()
                 .HasForeignKey(e => e.EquipeParentId);
-        }
 
+            // Relation entre Demande et Employe
+            modelBuilder.Entity<Demande>()
+                .HasOne(d => d.Employe)
+                .WithMany(e => e.Demandes)
+                .HasForeignKey(d => d.Matricule);
+
+            // Relation entre Demande et TypeDemande
+            modelBuilder.Entity<Demande>()
+                .HasOne(d => d.TypeDemande)
+                .WithMany(t => t.Demandes)
+                .HasForeignKey(d => d.IdType);
+        }
     }
 }
